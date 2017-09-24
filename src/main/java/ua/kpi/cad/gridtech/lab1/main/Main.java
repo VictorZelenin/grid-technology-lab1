@@ -45,7 +45,6 @@ public class Main {
         PrintWriter printWriter = new PrintWriter("data.csv", "UTF-8");
 
         printWriter.write("Time,Rejection,Velocity\n");
-        System.out.print("Time,Rejection,Velocity\n");
 
 
         for (double time = START_TIME; time <= END_TIME; time += TIME_STEP) {
@@ -65,7 +64,6 @@ public class Main {
             double newVelocityValue = velocity + (q1 + 2 * q2 + 2 * q3 + q4) / 6.0;
 
             printWriter.write(time + "," + x + "," + velocity + "\n");
-            System.out.println(time + "," + x + "," + velocity);
 
             x = newRejectionValue;
             velocity = newVelocityValue;
